@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" role="img" aria-labelledby="title desc">
+<title id="title">AGYEDABE ENTERPRISE horizontal logo</title><desc id="desc">Architectural monogram and wordmark for building consultants and real estate.</desc>
+<rect width="1500" height="500" fill="#FFFFFF"/>
+<g transform="translate(28 22) scale(.88)">
+  <path d="M62 398 198 122 252 122 123 398Z" fill="#103D2E"/>
+  <path d="M174 398 290 174 335 174 220 398Z" fill="#103D2E"/>
+  <path d="M198 122 248 87 248 266Z" fill="#C9A45C"/>
+  <path d="M271 143 311 171 311 314 271 290Z" fill="#C9A45C"/>
+  <path d="M323 181 349 200 349 325 323 309Z" fill="#103D2E"/>
+  <path d="M363 211 385 227 385 336 363 322Z" fill="#103D2E"/>
+  <path d="M400 238 418 251 418 347 400 336Z" fill="#103D2E"/>
+  <path d="M61 399 Q185 270 318 294 Q246 321 164 399Z" fill="#C9A45C"/>
+  <path d="M119 399 Q221 300 318 294 Q251 330 188 399Z" fill="#FFFFFF"/>
+  <path d="M190 399 Q271 313 350 306 Q291 342 252 399Z" fill="#C9A45C"/>
+  <path d="M286 197 299 206 299 249 286 242Z M337 226 347 233 347 275 337 269Z M376 252 384 258 384 296 376 291Z M410 275 417 280 417 315 410 310Z" fill="#FFFFFF"/>
+</g>
+<g font-family="Montserrat, Arial, sans-serif">
+  <text x="490" y="247" font-size="128" font-weight="800" letter-spacing="-3" fill="#103D2E">AGYEDABE</text>
+  <text x="500" y="333" font-size="65" font-weight="500" letter-spacing="21" fill="#C9A45C">ENTERPRISE</text>
+  <path d="M502 366H635 M1360 366H1460" stroke="#C9A45C" stroke-width="4"/>
+  <text x="655" y="378" font-size="29" font-weight="500" letter-spacing="3" fill="#252A27">BUILDING CONSULTANTS</text>
+  <text x="1017" y="378" font-size="31" font-weight="700" fill="#C9A45C">|</text>
+  <text x="1045" y="378" font-size="29" font-weight="500" letter-spacing="3" fill="#252A27">REAL ESTATE</text>
+</g>
+</svg>
