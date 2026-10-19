@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { PropertyStoreProvider } from "@/components/admin/PropertyStoreProvider";
 import "@fontsource-variable/manrope";
 import "./globals.css";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   },
   description:
     "Discover property opportunities and building consultancy support with AGYEDABE ENTERPRISE in Ghana.",
-  icons: { icon: "/brand/agyedabe-icon.svg" },
+  icons: { icon: "/brand/06_icon-only.png" },
 };
 
 export const viewport: Viewport = {
@@ -21,7 +22,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body><PropertyStoreProvider>{children}</PropertyStoreProvider></body>
     </html>
   );
 }
