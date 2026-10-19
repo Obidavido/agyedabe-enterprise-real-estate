@@ -17,12 +17,9 @@ import {
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import PropertySearch from "@/components/home/PropertySearch";
-import PropertyCard from "@/components/properties/PropertyCard";
+import FeaturedProperties from "@/components/home/FeaturedProperties";
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
-import { seedProperties } from "@/data/properties";
 import { whatsappEnquiry } from "@/lib/contact";
-
-const featuredProperties = seedProperties.filter((property) => property.featured && property.status !== "draft").slice(0, 4);
 
 const categories = [
   { label: "Houses", detail: "Family homes and townhouses", href: "/properties?propertyType=house", icon: Home },
@@ -101,9 +98,7 @@ export default function HomePage() {
               </div>
               <Link className="text-link" href="/properties">View all properties <ArrowRight size={15} /></Link>
             </div>
-            <div className="property-grid">
-              {featuredProperties.map((property) => <PropertyCard key={property.id} property={property} />)}
-            </div>
+            <FeaturedProperties />
           </div>
         </section>
 

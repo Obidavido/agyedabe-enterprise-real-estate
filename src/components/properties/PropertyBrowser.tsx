@@ -4,7 +4,7 @@ import { FormEvent, useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Grid2X2, List, Search, X } from "lucide-react";
 import PropertyCard from "@/components/properties/PropertyCard";
-import { seedProperties } from "@/data/properties";
+import { usePropertyStore } from "@/components/admin/PropertyStoreProvider";
 import {
   defaultPropertyFilters,
   filterAndSortProperties,
@@ -13,18 +13,18 @@ import {
   type PropertyFilters,
 } from "@/lib/property-search";
 
-const allProperties = seedProperties;
-const locations = Array.from(new Set(allProperties.map((property) => property.location))).sort();
 const PAGE_SIZE = 6;
 
 export default function PropertyBrowser() {
   const router = useRouter();
   const pathname = usePathname();
+  const { properties } = usePropertyStore();
   const searchParams = useSearchParams();
   const queryString = searchParams.toString();
   const [filters, setFilters] = useState<PropertyFilters>(() => parsePropertyFilters(new URLSearchParams(queryString)));
   const [view, setView] = useState<"grid" | "list">("grid");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const locations = useMemo(() => Array.from(new Set(properties.map((property) => property.location))).sort(), [properties]);
 
   useEffect(() => {
     setFilters(parsePropertyFilters(new URLSearchParams(queryString)));
@@ -34,7 +34,7 @@ export default function PropertyBrowser() {
     setVisibleCount(PAGE_SIZE);
   }, [filters]);
 
-  const filtered = useMemo(() => filterAndSortProperties(allProperties, filters), [filters]);
+  const filtered = useMemo(() => filterAndSortProperties(properties, filters), [properties, filters]);
   const visible = filtered.slice(0, visibleCount);
   const update = (key: keyof PropertyFilters, value: string) => setFilters((current) => ({ ...current, [key]: value }));
 
