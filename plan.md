@@ -15,7 +15,7 @@ Phase 1 is the foundation, shared public shell and complete homepage. Phase 2 is
 - `src/components/admin/`: admin shell, computed overview, property table, add/edit form, confirmation dialogs and reset control.
 - `src/data/properties.ts`: at least eight typed demo property records, including the Tantra Hill client listing and explicitly demo-only examples.
 - `src/types/property.ts`: shared listing/status/currency/property field types.
-- `src/lib/property-utils.ts`: filtering, sorting, formatting, query parsing and contact-link utilities.
+- `src/lib/property-utils.ts`: price, currency, type and status formatting; `src/lib/property-search.ts` handles query parsing, URL serialization, filtering and sorting; `src/lib/contact.ts` owns the supplied contact links and WhatsApp message encoding.
 - `src/lib/demo-storage.ts`: hydration-safe browser localStorage load/save/reset helpers with seed-data fallback.
 - `public/brand/`: supplied horizontal and icon SVGs. `public/images/`: locally copied, distinct sample property imagery.
 - `public/manus-routes.json`: synchronized page route manifest.

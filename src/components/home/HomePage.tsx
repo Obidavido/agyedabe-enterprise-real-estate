@@ -20,7 +20,7 @@ import PropertySearch from "@/components/home/PropertySearch";
 import PropertyCard from "@/components/properties/PropertyCard";
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
 import { seedProperties } from "@/data/properties";
-import { BUSINESS, whatsappEnquiry } from "@/lib/contact";
+import { whatsappEnquiry } from "@/lib/contact";
 
 const featuredProperties = seedProperties.filter((property) => property.featured && property.status !== "draft").slice(0, 4);
 
@@ -37,7 +37,7 @@ const services = [
   { title: "Building Consultancy", copy: "Discuss your building project and the consultancy support you may need.", icon: Ruler },
   { title: "Build and Sell", copy: "Talk through a build-and-sell project and the property goals behind it.", icon: Hammer },
   { title: "Build and Rent", copy: "Explore building with a rental purpose and enquire about a suitable approach.", icon: Building2 },
-  { title: "Viewing Assistance", copy: "Send a property enquiry and ask about arranging a viewing.", icon: UsersRound },
+  { title: "Property Enquiries and Viewing Assistance", copy: "Send a property enquiry and ask about arranging a viewing.", icon: UsersRound },
 ];
 
 const benefits = [
